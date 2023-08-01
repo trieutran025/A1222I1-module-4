@@ -20,7 +20,7 @@
                 <td><input type="text"name="world"placeholder="English"></td>
                 <td><input type="submit"value="translate"></td>
             </tr>
-            <tr>${result}</tr>
+            <tr><td>${result}</td></tr>
         </table>
     </fieldset>
 </form>
