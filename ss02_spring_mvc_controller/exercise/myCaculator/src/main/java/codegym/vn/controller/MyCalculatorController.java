@@ -18,16 +18,16 @@ public class MyCalculatorController {
                              @RequestParam("firstNum") int firstNum, @RequestParam("secondNum") int secondNum) {
         double result = 0;
         switch (calculations) {
-            case "addition(+)":
+            case "add":
                 result = (double) firstNum + secondNum;
                 break;
-            case "subtraction(-)":
+            case "sub":
                 result = (double) firstNum - secondNum;
                 break;
-            case "multiplication(X)":
+            case "mul":
                 result =(double) firstNum  * secondNum;
                 break;
-            case "division(/)":
+            case "div":
                 result = (double) firstNum / secondNum;
                 break;
             default:
