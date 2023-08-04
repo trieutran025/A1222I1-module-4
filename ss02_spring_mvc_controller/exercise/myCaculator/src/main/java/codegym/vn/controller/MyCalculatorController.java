@@ -14,8 +14,9 @@ public class MyCalculatorController {
     }
 
     @PostMapping("/calculate")
-    public String calculator(Model model, @RequestParam("calculations") String calculations,
-                             @RequestParam("firstNum") int firstNum, @RequestParam("secondNum") int secondNum) {
+    public String calculator(Model model, @RequestParam(value = "calculations", defaultValue = "add") String calculations,
+                             @RequestParam(value = "firstNum", defaultValue = "0") int firstNum,
+                             @RequestParam(value = "secondNum", defaultValue = "0") int secondNum) {
         double result = 0;
         switch (calculations) {
             case "add":
@@ -25,17 +26,17 @@ public class MyCalculatorController {
                 result = (double) firstNum - secondNum;
                 break;
             case "mul":
-                result =(double) firstNum  * secondNum;
+                result = (double) firstNum * secondNum;
                 break;
             case "div":
                 result = (double) firstNum / secondNum;
                 break;
             default:
         }
-        model.addAttribute("calculations",calculations);
-        model.addAttribute("firstNum",firstNum);
-        model.addAttribute("secondNum",secondNum);
-        model.addAttribute("result",result);
+        model.addAttribute("calculations", calculations);
+        model.addAttribute("firstNum", firstNum);
+        model.addAttribute("secondNum", secondNum);
+        model.addAttribute("result", result);
         return "/index";
     }
 }

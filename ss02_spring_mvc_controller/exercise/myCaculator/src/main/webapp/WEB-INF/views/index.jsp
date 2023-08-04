@@ -16,7 +16,7 @@
         <legend>Calculator</legend>
     <input type="number" name="firstNum" value="${firstNum}">
     <input type="number" name="secondNum" value="${secondNum}"> <br><br>
-    <input type="radio" value="add" name="calculations">addition(+)
+    <input type="radio" value="add" name="calculations"checked>addition(+)
     <input type="radio" value="sub" name="calculations">subtraction(-)
     <input type="radio" value="mul" name="calculations">multiplication(X)
     <input type="radio" value="div" name="calculations">division(/)<br><br>
