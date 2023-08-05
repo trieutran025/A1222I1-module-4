@@ -11,6 +11,6 @@
     <title>Error</title>
 </head>
 <body>
-<h1>Login error</h1>
+<h1>Có cái đầu bùi</h1>
 </body>
 </html>
