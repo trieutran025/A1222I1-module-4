@@ -31,7 +31,6 @@ public class MyCalculatorController {
             case "div":
                 result = (double) firstNum / secondNum;
                 break;
-            default:
         }
         model.addAttribute("calculations", calculations);
         model.addAttribute("firstNum", firstNum);
