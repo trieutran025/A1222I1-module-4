@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class CurrencyConverterApp {
+public class CurrencyConverterController {
     public double converter(double moneyUSD,double rate) {
         return moneyUSD * rate;
     }
@@ -17,7 +17,7 @@ public class CurrencyConverterApp {
         return "/converter/money";
     }
         @PostMapping("/swap")
-    public String CurrencyConverter(@RequestParam double moneyUSD, @RequestParam double rate, Model model) {
+    public String currencyConverter(@RequestParam double moneyUSD, @RequestParam double rate, Model model) {
         model.addAttribute("result", converter(moneyUSD,rate));
         return "/converter/money";
     }
