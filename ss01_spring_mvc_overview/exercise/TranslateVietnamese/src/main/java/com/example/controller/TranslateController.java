@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class Translate {
+public class TranslateController {
     public String  translate(String world){
         String [] arrViet = {"Xin Chao","Toi Ten La","Cay","nam","Mot","Muoi"};
         String [] arrEng = {"Hi","My name is","Spicy","Man","One","Ten"};
