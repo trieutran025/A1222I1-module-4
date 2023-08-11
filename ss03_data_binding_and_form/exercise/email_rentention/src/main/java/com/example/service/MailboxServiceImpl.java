@@ -3,9 +3,10 @@ package com.example.service;
 import com.example.model.Mailbox;
 import com.example.repository.MailboxRepoI;
 import com.example.repository.MailboxRepoImpl;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class MailboxServiceImpl implements MailboxServiceI{
     MailboxRepoI repoI = new MailboxRepoImpl();
     @Override

@@ -1,22 +1,21 @@
 package com.example.repository;
 
 import com.example.model.Mailbox;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
+
+@Repository
 
 public class MailboxRepoImpl implements MailboxRepoI {
     private static Map<String, Mailbox> mailboxMap;
 
-
-
-
-
     static {
         mailboxMap = new HashMap<>();
-        mailboxMap.put("1",new Mailbox("1","Vietnamese ","25"," ","Thor King"));
-        mailboxMap.put("2",new Mailbox("2","English","5"," ","Thor King"));
-        mailboxMap.put("3",new Mailbox("3","Japanese","15"," ","Bar King"));
-        mailboxMap.put("4",new Mailbox("4","Chinese","50"," ","ken King"));
+        mailboxMap.put("1", new Mailbox("1", "Vietnamese ", "25", " ", "Thor King"));
+        mailboxMap.put("2", new Mailbox("2", "English", "5", " ", "Thor King"));
+        mailboxMap.put("3", new Mailbox("3", "Japanese", "15", " ", "Bar King"));
+        mailboxMap.put("4", new Mailbox("4", "Chinese", "50", " ", "ken King"));
     }
 
     @Override
