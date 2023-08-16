@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/music/create}" th:object="${songForm}"
+      method="POST" novalidate="novalidate" enctype="multipart/form-data">
+    <table border="1">
+        <tr>
+            <td>
+                <label >Id</label>
+                <input type="text" th:field="*{id}">
+            </td>
+            <td>
+                <label >NameSong</label>
+                <input type="text" th:field="*{nameSong}" ></td>
+
+            <td>
+            <td>
+                <label >Author</label>
+                <input type="text" th:field="*{author} "></td>
+            <td>
+            <td th:each="list : ${musicGenres}">
+                <input type="checkbox" th:field="*{musicGenres}" th:value="${list}" th:id="${list}">
+            <label th:text="${list}" th:for="${list}"></label>
+            <td>
+
+            </td>
+            <td>
+                <label >SongPath</label>
+                <input type="file" th:field="*{link}">
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="upload">
+</form>
+</body>
+</html>

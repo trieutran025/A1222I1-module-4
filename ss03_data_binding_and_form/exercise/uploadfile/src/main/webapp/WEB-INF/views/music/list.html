@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a th:href="@{/musicApp/create}">
+        Add new music
+    </a>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Image</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="ms : ${}">
+        <td th:text="${ms.name}"></td>
+        <td th:text="${ms.description}"></td>
+        <td th:></td>
+    </tr>
+    </tbody>
+</table>
+</p>
+</body>
+</html>
