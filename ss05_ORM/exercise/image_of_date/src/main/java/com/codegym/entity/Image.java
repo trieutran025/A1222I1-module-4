@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.time.LocalDate;
 
 @Entity
 @Table(name = "images")
@@ -15,7 +14,7 @@ public class Image {
     private int rate;
     private String author;
     private String feedback;
-    private int Likes;
+    private int likes;
     private String startDate;
 
     public Image(int id, int rate, String author, String feedback, int likes, String startDate) {
@@ -23,7 +22,7 @@ public class Image {
         this.rate = rate;
         this.author = author;
         this.feedback = feedback;
-        this.Likes = likes;
+        this.likes = likes;
         this.startDate = startDate;
     }
 
@@ -38,11 +37,11 @@ public class Image {
 
 
     public int getLikes() {
-        return Likes;
+        return likes;
     }
 
     public void setLikes(int like) {
-        this.Likes = like;
+        this.likes = like;
     }
 
     public int getId() {
