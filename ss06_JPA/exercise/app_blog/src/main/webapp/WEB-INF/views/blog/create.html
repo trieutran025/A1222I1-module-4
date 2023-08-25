@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/html">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Blog</title>
+</head>
+<body>
+<a th:href="@{/blog/list}">Back to List</a>
+<form method="post" th:action="@{/blog/create}" th:object="${blog}">
+    <input type="hidden"name="id"th:value="*{id}">
+  <textarea th:field="*{header}"></textarea>
+  <textarea th:field="*{content}"></textarea>
+    <span th:text="${action}"></span>
+    <input type="hidden"name="action" th:value="${action}">
+    <input type="submit"value="Save">
+</form>
+</body>
+</html>
