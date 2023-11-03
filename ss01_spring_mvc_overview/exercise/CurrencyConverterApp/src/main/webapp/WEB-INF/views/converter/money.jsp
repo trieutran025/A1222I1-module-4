@@ -32,7 +32,7 @@
         <table>
             <tr>
                 <td>Rate:</td>
-                <td><input type="number" name="rate" required placeholder="Rate"></td>
+                <td><input type="number" name="rate" required placeholder="Rate" value="23000"></td>
             </tr>
             <tr>
                 <td>Enter money</td>
