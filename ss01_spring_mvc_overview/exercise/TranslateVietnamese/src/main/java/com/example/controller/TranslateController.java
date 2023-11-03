@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class TranslateController {
     public String  translate(String world){
-        String [] arrViet = {"Xin Chao","Toi Ten La","Cay","nam","Mot","Muoi"};
+        String [] arrViet = {"Xin chào","Tôi tên là","cay","nam","Một","Mười"};
         String [] arrEng = {"Hi","My name is","Spicy","Man","One","Ten"};
         for (int i = 0; i <arrViet.length ; i++) {
             if(world.equals(arrEng[i])){
